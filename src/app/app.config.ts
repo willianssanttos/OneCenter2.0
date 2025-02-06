@@ -7,7 +7,7 @@ import { GoogleMapsModule } from '@angular/google-maps';
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideRouter([]), 
-    importProvidersFrom(HttpClientModule, FormsModule, AppRoutingModule, GoogleMapsModule) 
+    provideRouter([]),
+    importProvidersFrom(HttpClientModule, FormsModule, AppRoutingModule, GoogleMapsModule)
   ]
 };
