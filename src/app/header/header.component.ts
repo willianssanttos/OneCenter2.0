@@ -6,7 +6,12 @@ import { MainNavigationComponent } from '../header/main-navigation/main-navigati
 
 @Component({
   selector: 'app-header',
-  imports: [TopBarComponent, HeaderMainComponent, MainNavigationComponent, PageMenuComponent ],
+  imports: [
+    TopBarComponent,
+    PageMenuComponent,
+    HeaderMainComponent,
+    MainNavigationComponent
+  ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })

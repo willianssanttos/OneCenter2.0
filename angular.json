@@ -20,53 +20,67 @@
               "zone.js"
             ],
             "tsConfig": "tsconfig.app.json",
+            "aot": false,
             "assets": [
-              {
-                "glob": "**/*",
-                "input": "public"
-              }
+                "src/favicon.ico",
+                "src/assets",
+                {
+                  "glob": "**/*",
+                  "input": "public"
+                }
             ],
             "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "src/assets/plugins/fontawesome-free-5.0.1/css/fontawesome-all.css",
-              "src/assets/plugins/OwlCarousel2-2.2.1/owl.carousel.css",
-              "src/assets/plugins/OwlCarousel2-2.2.1/owl.theme.default.css",
-              "src/assets/plugins/OwlCarousel2-2.2.1/animate.css",
-              "src/assets/plugins/jquery-ui-1.12.1.custom/jquery-ui.css",
-              "src/assets/styles/shop_styles.css",
-              "src/assets/styles/shop_responsive.css",
-              "src/assets/styles/cart_styles.css",
-              "src/assets/styles/cart_responsive.css",
-              "src/assets/styles/contact_styles.css",
-              "src/assets/styles/contact_responsive.css",
-              "src/assets/styles/product_styles.css",
-              "src/assets/styles/product_responsive.css",
-              "src/styles.css"
+            "node_modules/bootstrap/dist/css/bootstrap.min.css",
+            "src/assets/plugins/fontawesome-free-5.0.1/css/fontawesome-all.css",
+            "src/assets/plugins/OwlCarousel2-2.2.1/owl.carousel.css",
+            "src/assets/plugins/OwlCarousel2-2.2.1/owl.theme.default.css",
+            "src/assets/plugins/OwlCarousel2-2.2.1/animate.css",
+            "src/assets/plugins/jquery-ui-1.12.1.custom/jquery-ui.css",
+            "src/assets/styles/shop_styles.css",
+            "src/assets/styles/shop_responsive.css",
+            "src/assets/styles/cart_styles.css",
+            "src/assets/styles/cart_responsive.css",
+            "src/assets/styles/contact_styles.css",
+            "src/assets/styles/contact_responsive.css",
+            "src/assets/styles/product_styles.css",
+            "src/assets/styles/product_responsive.css",
+            "src/styles.css"
             ],
-            "scripts": [          
-              "node_modules/jquery/dist/jquery.js",
-              "node_modules/bootstrap/dist/js/bootstrap.min.js",
-              "src/assets/styles/bootstrap4/popper.js",
-              "src/assets/styles/bootstrap4/bootstrap.min.js",
-              "src/assets/plugins/greensock/TweenMax.min.js",
-              "src/assets/plugins/greensock/TimelineMax.min.js",
-              "src/assets/plugins/scrollmagic/ScrollMagic.min.js",
-              "src/assets/plugins/greensock/animation.gsap.min.js",
-              "src/assets/plugins/greensock/ScrollToPlugin.min.js",
-              "src/assets/plugins/OwlCarousel2-2.2.1/owl.carousel.js",
-              "src/assets/plugins/easing/easing.js",
-              "src/assets/plugins/Isotope/isotope.pkgd.min.js",
-              "src/assets/plugins/jquery-ui-1.12.1.custom/jquery-ui.js",
-              "src/assets/plugins/parallax-js-master/parallax.min.js",
-              "src/assets/js/shop_custom.js",
-              "src/assets/js/cart_custom.js",
-              "src/assets/js/contact_custom.js",
-              "src/assets/js/product_custom.js"
-           ]
-           
+            "scripts": [
+            "node_modules/jquery/dist/jquery.js",
+            "node_modules/bootstrap/dist/js/bootstrap.min.js",
+            "src/assets/styles/bootstrap4/popper.js",
+            "src/assets/styles/bootstrap4/bootstrap.min.js",
+            "src/assets/plugins/greensock/TweenMax.min.js",
+            "src/assets/plugins/greensock/TimelineMax.min.js",
+            "src/assets/plugins/scrollmagic/ScrollMagic.min.js",
+            "src/assets/plugins/greensock/animation.gsap.min.js",
+            "src/assets/plugins/greensock/ScrollToPlugin.min.js",
+            "src/assets/plugins/OwlCarousel2-2.2.1/owl.carousel.js",
+            "src/assets/plugins/easing/easing.js",
+            "src/assets/plugins/Isotope/isotope.pkgd.min.js",
+            "src/assets/plugins/jquery-ui-1.12.1.custom/jquery-ui.js",
+            "src/assets/plugins/parallax-js-master/parallax.min.js",
+            "src/assets/js/shop_custom.js",
+            "src/assets/js/cart_custom.js",
+            "src/assets/js/contact_custom.js",
+            "src/assets/js/product_custom.js"
+            ]
           },
           "configurations": {
             "production": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
               "budgets": [
                 {
                   "type": "initial",
@@ -78,8 +92,7 @@
                   "maximumWarning": "4kB",
                   "maximumError": "8kB"
                 }
-              ],
-              "outputHashing": "all"
+              ]
             },
             "development": {
               "optimization": false,
@@ -113,6 +126,8 @@
             ],
             "tsConfig": "tsconfig.spec.json",
             "assets": [
+              "src/favicon.ico",
+              "src/assets",
               {
                 "glob": "**/*",
                 "input": "public"
