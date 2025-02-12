@@ -23,7 +23,9 @@
 
         <!-- Shop Page Navigation -->
             <!-- Product Item -->
-            <app-product-item *ngFor="let produto of produtos" [produto]="produto"></app-product-item>
+            <div *ngFor="let produto of produtos">
+                <app-product-item [produto]="produto"></app-product-item>
+            </div>
 
         <!-- Shop Page Navigation -->
         <div class="shop_page_nav d-flex flex-row">

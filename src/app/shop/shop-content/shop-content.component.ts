@@ -12,20 +12,21 @@ import { ProductItemComponent } from '../../product/product-item/product-item.co
   imports: [CommonModule, ProductItemComponent], 
 })
 export class ShopContentComponent {
+  
   qtdeProdutos = 200;
   produtos: any[] = [];
 
-  constructor(private productService: ProductService) {}
+  constructor(private productService: ProductService) { }
 
   ngOnInit() {
     this.productService.getProducts().subscribe({
       next: (data) => {
-        console.log('Produtos recebidos:', data); 
-        this.produtos = data.produto;
+        console.log('Produtos carregados:', data);
+        this.produtos = data; // Armazena os produtos
       },
-      error: (err) => {
-        console.error('Erro ao carregar produtos:', err);
-      },
+      error: (error) => {
+        console.error('Erro ao carregar produtos:', error);
+      }
     });
   }
 
