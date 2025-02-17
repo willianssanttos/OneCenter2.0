@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
 })
 export class ProductItemComponent implements OnInit{
 
-  @Input() produto!: { nome: string; preco: number; imagem_produto: string; };
+  @Input() produto!: { nome: string; preco: number; produto_imagem: string; };
 
   ngOnInit() {
     

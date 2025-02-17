@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { map } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
@@ -7,12 +8,10 @@ import { Observable } from 'rxjs';
 })
 export class ProductService {
 
-  SERVER_URL = 'http://localhost:3000';
-
   constructor(private http: HttpClient) { }
 
-  getProducts(): Observable<{ produto: any[] }> {
-    return this.http.get<{ produto: any[] }>(`${this.SERVER_URL}/produtos?t=${new Date().getTime()}`);
-  }  
+  getProducts(): Observable<any[]> {
+    return this.http.get<any[]>(`/v1/produtos/`);
+  }
   
 }

@@ -20,11 +20,11 @@ export class ShopContentComponent {
   ngOnInit() {
     this.productService.getProducts().subscribe({
       next: (data) => {
-        console.log('Produtos recebidos:', data); 
-        this.produtos = data.produto;
+        console.log('Produtos carregados:', data); 
+        this.produtos = data;
       },
-      error: (err) => {
-        console.error('Erro ao carregar produtos:', err);
+      error: (error) => {
+        console.error('Erro ao carregar produtos:', error);
       },
     });
   }
