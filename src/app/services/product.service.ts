@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { map } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
@@ -12,5 +13,4 @@ export class ProductService {
   getProducts(): Observable<any[]> {
     return this.http.get<any[]>(`/v1/produtos/`);
   }
-
 }

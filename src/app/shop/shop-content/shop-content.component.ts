@@ -22,7 +22,7 @@ export class ShopContentComponent {
     this.productService.getProducts().subscribe({
       next: (data) => {
         console.log('Produtos carregados:', data);
-        this.produtos = data; // Armazena os produtos
+        this.produtos = data; 
       },
       error: (error) => {
         console.error('Erro ao carregar produtos:', error);
