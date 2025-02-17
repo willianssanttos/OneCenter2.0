@@ -13,5 +13,4 @@ export class ProductService {
   getProducts(): Observable<any[]> {
     return this.http.get<any[]>(`/v1/produtos/`);
   }
-  
 }
