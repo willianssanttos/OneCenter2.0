@@ -10,6 +10,7 @@ import { NewsletterComponent } from '../newsletter/newsletter.component';
 import { BannerComponent } from "../banner/banner.component";
 import { NewArrivalsComponent } from "../new-arrivals/new-arrivals.component";
 //import { HomeComponent } from '../home/home.component';
+import { BestSellersComponent } from '../best-sellers/best-sellers.component';
 
 
 @Component({
@@ -25,7 +26,8 @@ import { NewArrivalsComponent } from "../new-arrivals/new-arrivals.component";
     CopyrightComponent,
     NewsletterComponent,
     BannerComponent,
-    NewArrivalsComponent
+    NewArrivalsComponent,
+    BestSellersComponent
 ],
   templateUrl: './layout.component.html',
   styleUrls: ['./layout.component.css']
