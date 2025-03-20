@@ -11,6 +11,8 @@ import { BannerComponent } from "../banner/banner.component";
 import { NewArrivalsComponent } from "../new-arrivals/new-arrivals.component";
 //import { HomeComponent } from '../home/home.component';
 import { BestSellersComponent } from '../best-sellers/best-sellers.component';
+import { AdvertsComponent } from '../adverts/adverts.component';
+import { ReviewsComponent } from '../reviews/reviews.component';
 
 
 @Component({
@@ -19,6 +21,7 @@ import { BestSellersComponent } from '../best-sellers/best-sellers.component';
     RouterOutlet,
     CommonModule,
     //HomeComponent,
+    AdvertsComponent,
     HeaderComponent,
     ViewedComponent,
     BrandsComponent,
@@ -27,7 +30,8 @@ import { BestSellersComponent } from '../best-sellers/best-sellers.component';
     NewsletterComponent,
     BannerComponent,
     NewArrivalsComponent,
-    BestSellersComponent
+    BestSellersComponent,
+    ReviewsComponent
 ],
   templateUrl: './layout.component.html',
   styleUrls: ['./layout.component.css']
