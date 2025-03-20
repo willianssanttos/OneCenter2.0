@@ -1373,6 +1373,7 @@ select option
 .banner_text
 {
 	font-family: 'Montserrat', sans-serif;
+	margin-top: 15px;
 	font-weight: 500;
 	line-height: 1.166;
 	color: #7599b2;
@@ -1387,7 +1388,7 @@ select option
 {
 	font-size: 30px;
 	color: #df3b3b;
-	margin-top: 87px;
+	margin-top: 15px;
 }
 .banner_price span
 {
@@ -1400,7 +1401,7 @@ select option
 {
 	display: block;
 	position: absolute;
-	top: 21px;
+	top: 20px;
 	left: 0;
 	width: 100%;
 	height: 2px;
@@ -1409,21 +1410,32 @@ select option
 }
 .banner_product_name
 {
-	font-size: 18px;
+	font-size: 20px;
 	font-weight: 400;
 	color: #000000;
 	margin-top: 8px;
 }
 .banner_button
 {
-	margin-top: 42px;
+	margin-top: 30px;
 }
-.banner_product_image
+.banner_image_container
 {
+	width: 100%;
+	height: 100%;
+}
+.banner_image
+{
+	min-width: 90%;
+	width: calc(44.8vw);
 	position: absolute;
-	top: -5px;
-	right: -52px;
-	z-index: 0;
+	top: 60%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+	left: 0;
 }
 
 /*********************************
