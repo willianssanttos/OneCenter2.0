@@ -8,7 +8,7 @@ import { ReviewsComponent } from '../../reviews/reviews.component';
 import { NewArrivalsComponent } from '../../new-arrivals/new-arrivals.component';
 import { BestSellersComponent } from '../../best-sellers/best-sellers.component';
 import { ShopSidebarComponent } from '../../shop/shop-sidebar/shop-sidebar.component';
-import { DealsFeaturedComponent } from '../../shop/deals-featured/deals-featured.component';
+import { ShopProductComponent } from "../../shop/shop-product/shop-product.component";
 
 @Component({
   selector: 'app-shop-home',
@@ -21,9 +21,9 @@ import { DealsFeaturedComponent } from '../../shop/deals-featured/deals-featured
     ReviewsComponent,
     NewArrivalsComponent,
     BestSellersComponent,
-    DealsFeaturedComponent,
-    ShopSidebarComponent
-  ],
+    ShopSidebarComponent,
+    ShopProductComponent
+],
   templateUrl: './shop-home.component.html',
   styleUrl: './shop-home.component.css'
 })

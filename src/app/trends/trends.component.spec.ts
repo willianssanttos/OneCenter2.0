@@ -21,3 +21,4 @@ describe('TrendsComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+

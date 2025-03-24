@@ -1,15 +1,15 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { ProductService } from '../../services/product.service';
 
 @Component({
-  selector: 'app-deals-featured',
+  selector: 'app-shop-product',
   imports: [CommonModule, RouterLink],
-  templateUrl: './deals-featured.component.html',
-  styleUrl: './deals-featured.component.css'
+  templateUrl: './shop-product.component.html',
+  styleUrl: './shop-product.component.css'
 })
-export class DealsFeaturedComponent implements OnInit{
+export class ShopProductComponent implements OnInit{
   produtos: any[] = [];
   
   constructor(private productService: ProductService) {}

@@ -61,6 +61,7 @@ $(document).ready(function()
 	initViewedSlider();
 	initBrandsSlider();
 	initTimer();
+	productSlider();
 
 	$(window).on('resize', function()
 	{
@@ -68,6 +69,9 @@ $(document).ready(function()
 		featuredSliderZIndex();
 		initTabLines();
 	});
+
+
+	  
 
 	/* 
 
@@ -369,6 +373,11 @@ $(document).ready(function()
 							{
 								initASlider(slider);
 							}
+							if(slider.hasClass('product_slider'))
+							{
+								initASlider(slider);
+							} 
+							
 						});
 					});	
 				});
@@ -1029,4 +1038,71 @@ $(document).ready(function()
     		});	
     	}	
     }
+
+	/* 
+
+	15. Init Product Slider
+
+	*/
+
+	function productSlider()
+	{
+		if($('.product_slider').length)
+		{
+			var productSliders = $('.product_slider');
+			productSliders.each(function()
+			{
+				var productSlider = $(this);
+
+				initProductSlider(productSlider);
+			})	
+		}
+	}
+
+	function initProductSlider(ps)
+	{
+		var productSlider = ps;
+
+		productSlider.slick(
+		{
+			rows:2,
+			infinite:true,
+			slidesToShow:3,
+			slidesToScroll:3,
+			arrows:false,
+			dots:true,
+			autoplay: true,
+  			autoplaySpeed: 6000,
+			responsive:
+			[
+				{
+					breakpoint:1199, settings:
+					{
+						rows:2,
+						slidesToShow:2,
+						slidesToScroll:2,
+						dots:true
+					}
+				},
+				{
+					breakpoint:991, settings:
+					{
+						rows:2,
+						slidesToShow:1,
+						slidesToScroll:1,
+						dots:true
+					}
+				},
+				{
+					breakpoint:575, settings:
+					{
+						rows:1,
+						slidesToShow:1,
+						slidesToScroll:1,
+						dots:false
+					}
+				}
+			]
+		});
+	}
 });
