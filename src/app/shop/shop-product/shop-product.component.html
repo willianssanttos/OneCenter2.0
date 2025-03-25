@@ -1,22 +1,22 @@
-<div class="product_shop_container">
+<div class="shop_product_container" >
     <div class="bestsellers_slider slider">
-        <div class="product_shop_item" *ngFor="let produto of produtos">
-            <div class="product_shop_image">
+        <div class="shop_product_item" *ngFor="let produto of produtos"  [routerLink]="['/product', produto.id_produto]">
+            <div class="shop_product_image">
                 <img [src]="produto.produtoImagem" alt="{{ produto.nome }}">
             </div>
-            <div class="product_shop_name">
+            <div class="shop_product_name">
                 <span><a *ngIf="produto.id_produto" [routerLink]="['/product', produto.id_produto]">
                     {{ produto.nome }}
                 </a></span>
             </div>
-            <div class="product_shop_price">
+            <div class="shop_product_price">
                 <span class="price">{{ produto.preco | currency: 'BRL' }}</span>
                 <span class="discount">-{{ produto.desconto }}%</span>
             </div>
-            <div class="product_shop_installments">
+            <div class="shop_product_installments">
                 <span>Até {{ produto.parcelas }}x de {{ (produto.preco / produto.parcelas) | currency: 'BRL' }}</span>
             </div>
-            <div class="product_shop_shipping">
+            <div class="shop_product_shipping">
                 <span>Frete: {{ produto.frete ? 'Grátis' : 'Consulte' }}</span>
             </div>
         </div>
