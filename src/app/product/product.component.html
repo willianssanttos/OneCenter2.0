@@ -7,9 +7,9 @@
 				<!-- Images -->
 				<div class="col-lg-2 order-lg-1 order-2">
 					<ul class="image_list">
-						<li data-image="../../assets/images/single_4.jpg"><img src="../../assets/images/single_4.jpg" alt=""></li>
-						<li data-image="../../assets/images/single_2.jpg"><img src="../../assets/images/single_2.jpg" alt=""></li>
-						<li data-image="../../assets/images/single_3.jpg"><img src="../../assets/images/single_3.jpg" alt=""></li>
+						<li *ngFor="let imagem of produto.imagens" [attr.data-image]="imagem">
+							<img [attr.src]="imagem" alt="">
+						</li>
 					</ul>
 				</div>
 
