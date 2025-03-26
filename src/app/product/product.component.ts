@@ -1,4 +1,4 @@
-import { Component, OnInit  } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { ProductService } from '../services/product.service';
@@ -11,7 +11,8 @@ import { ProductService } from '../services/product.service';
 })
 export class ProductComponent implements OnInit {
 
-  produto: any;
+  produto: any = null;
+  imagemSelecionada: string = '';
 
   constructor(private route: ActivatedRoute, private productService: ProductService) { }
 
@@ -20,9 +21,16 @@ export class ProductComponent implements OnInit {
     
     if (id) {
       this.productService.getProductById(Number(id)).subscribe(
-        (produto) => (this.produto = produto),
+        (produto) => {
+          this.produto = produto;
+          this.imagemSelecionada = produto.produto_imagem;
+        },
         (erro) => console.error('Erro ao carregar produto', erro)
       );
     }
+  }
+
+  selecionarImagem(imagem: string) {
+    this.imagemSelecionada = imagem;
   }
 }

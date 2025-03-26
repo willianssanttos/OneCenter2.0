@@ -7,15 +7,20 @@
 				<!-- Images -->
 				<div class="col-lg-2 order-lg-1 order-2">
 					<ul class="image_list">
-						<li data-image="../../assets/images/single_4.jpg"><img src="../../assets/images/single_4.jpg" alt=""></li>
-						<li data-image="../../assets/images/single_2.jpg"><img src="../../assets/images/single_2.jpg" alt=""></li>
-						<li data-image="../../assets/images/single_3.jpg"><img src="../../assets/images/single_3.jpg" alt=""></li>
+						<li onKeyPress *ngFor="let imagem of produto.imagens"
+						[attr.data-image]="imagem"
+						(click)="selecionarImagem(imagem)"
+						(mouseenter)="selecionarImagem(imagem)">
+						<img [attr.src]="imagem" alt="">
+					</li>
 					</ul>
 				</div>
 
 				<!-- Selected Image -->
 				<div class="col-lg-5 order-lg-2 order-1">
-					<div class="image_selected"><img [attr.src]="'http://localhost:8080' + produto.produto_imagem" alt=""></div>
+					<div class="image_selected">
+						<img *ngIf="imagemSelecionada" [src]="imagemSelecionada" alt="">
+					</div>
 				</div>
 
 				<!-- Description -->
@@ -23,7 +28,6 @@
 					<div class="product_description">
 						<div class="product_category">{{ produto.nomeCategoria }}</div>
 						<div class="product_name">{{ produto.nome }}</div>
-						<div class="rating_r rating_r_4 product_rating"><i></i><i></i><i></i><i></i><i></i></div>
 						<div class="product_text"><p>{{ produto.descricaoProduto }}</p></div>
 						<div class="order_info d-flex flex-row">
 							<form action="#">
