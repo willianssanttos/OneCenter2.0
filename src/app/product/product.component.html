@@ -7,15 +7,20 @@
 				<!-- Images -->
 				<div class="col-lg-2 order-lg-1 order-2">
 					<ul class="image_list">
-						<li *ngFor="let imagem of produto.imagens" [attr.data-image]="imagem">
-							<img [attr.src]="imagem" alt="">
-						</li>
+						<li onKeyPress *ngFor="let imagem of produto.imagens"
+						[attr.data-image]="imagem"
+						(click)="selecionarImagem(imagem)"
+						(mouseenter)="selecionarImagem(imagem)">
+						<img [attr.src]="imagem" alt="">
+					</li>
 					</ul>
 				</div>
 
 				<!-- Selected Image -->
 				<div class="col-lg-5 order-lg-2 order-1">
-					<div class="image_selected"><img [attr.src]="'http://localhost:8080' + produto.produto_imagem" alt=""></div>
+					<div class="image_selected">
+						<img *ngIf="imagemSelecionada" [src]="imagemSelecionada" alt="">
+					</div>
 				</div>
 
 				<!-- Description -->
